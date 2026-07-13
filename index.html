@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Website</title>
+
+
+<style>
+
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    font-family:Arial, sans-serif;
+
+    overflow:hidden;
+
+}
+
+
+
+/* NAVIGATION */
+
+nav{
+
+    position:fixed;
+
+    top:0;
+
+    width:100%;
+
+    background:rgba(0,0,0,0.8);
+
+    padding:15px;
+
+    text-align:center;
+
+    z-index:1000;
+
+}
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin:20px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+}
+
+
+nav a:hover{
+
+    color:#00ffff;
+
+}
+
+
+
+/* SLIDER */
+
+.slider{
+
+    display:flex;
+
+    width:400vw;
+
+    height:100vh;
+
+    overflow-x:auto;
+
+    scroll-snap-type:x mandatory;
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+.page{
+
+    width:100vw;
+
+    height:100vh;
+
+    flex-shrink:0;
+
+    scroll-snap-align:start;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    text-align:center;
+
+    padding:40px;
+
+
+    position:relative;
+
+    color:white;
+
+}
+
+
+
+/* ALL PAGE BACKGROUND */
+
+#home,
+#about,
+#gallery,
+#contact{
+
+
+    background-image:url("wert.jpeg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+
+}
+
+
+
+/* DARK OVERLAY */
+
+#home::before,
+#about::before,
+#gallery::before,
+#contact::before{
+
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,0.5);
+
+
+}
+
+
+
+/* CONTENT ABOVE OVERLAY */
+
+.page h1,
+.page p,
+.page h3,
+.images{
+
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+
+
+/* HOME */
+
+#home h1{
+
+    font-size:55px;
+
+}
+
+
+#home p{
+
+    font-size:24px;
+
+}
+
+
+
+/* ABOUT */
+
+#about h1{
+
+    font-size:45px;
+
+}
+
+
+#about p{
+
+
+    max-width:750px;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+
+
+/* GALLERY */
+
+#gallery h1{
+
+    font-size:45px;
+
+}
+
+
+
+.images{
+
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+    margin-top:30px;
+
+}
+
+
+
+.images img{
+
+
+    width:220px;
+
+    height:180px;
+
+
+    object-fit:cover;
+
+
+    border-radius:15px;
+
+
+    border:4px solid #00aaff;
+
+
+    transition:0.3s;
+
+}
+
+
+
+.images img:hover{
+
+
+    transform:scale(1.08);
+
+
+}
+
+
+
+/* CONTACT */
+
+#contact h1{
+
+
+    font-size:45px;
+
+}
+
+
+#contact p{
+
+
+    font-size:22px;
+
+}
+
+
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+
+nav a{
+
+    margin:8px;
+
+    font-size:14px;
+
+}
+
+
+
+#home h1{
+
+    font-size:35px;
+
+}
+
+
+
+.images img{
+
+    width:150px;
+
+    height:120px;
+
+}
+
+
+}
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#gallery">Gallery</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+
+
+
+
+<!-- SLIDER -->
+
+
+<div class="slider">
+
+
+
+<!-- HOME -->
+
+<section class="page" id="home">
+
+
+<h1>Welcome to My Website</h1>
+
+<p>JEMWEL C. TORREON</p>
+
+
+</section>
+
+
+
+
+
+<!-- ABOUT -->
+
+
+<section class="page" id="about">
+
+
+<h1>About Me</h1>
+
+
+<p>
+
+Hello! My name is <b>Jemwel C Torreon</b>.
+I am an <b>Information Technology (IT) student</b>
+who is passionate about computers, programming,
+and web development.
+
+<br><br>
+
+I enjoy creating websites and learning new
+technologies to improve my skills. I am currently
+studying HTML, CSS, JavaScript, databases, and
+software development.
+
+<br><br>
+
+My goal is to become a professional IT specialist
+and create innovative technology solutions that
+can help people and businesses.
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- GALLERY -->
+
+
+<section class="page" id="gallery">
+
+
+<h1>Gallery</h1>
+
+
+<div class="images">
+
+
+<img src="3.jpeg" alt="Image 1">
+
+<img src="4.jpeg" alt="Image 2">
+
+<img src="5.jpeg" alt="Image 3">
+
+<img src="6.jpeg" alt="Image 4">
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- CONTACT -->
+
+
+<section class="page" id="contact">
+
+
+<h1>Contact</h1>
+
+
+<br>
+
+
+<h3>Email</h3>
+
+<p>itsjemwert77@email.com</p>
+
+
+<br>
+
+
+<h3>Phone</h3>
+
+<p>+63 912 345 6789</p>
+
+
+
+</section>
+
+
+
+
+
+</div>
+
+
+
+</body>
+
+</html>
